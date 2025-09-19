@@ -9,10 +9,15 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 @WebServlet("/poly/hello.php")
-public class foly extends HttpServlet{
+public class HelloServlet extends HttpServlet{
+/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 @Override
 protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 throws ServletException, IOException{
-	resp.getWriter().println("<h1>hello</h1>");
+	req.getRequestDispatcher("/views/index.jsp").forward(req,resp);
 }
 }
