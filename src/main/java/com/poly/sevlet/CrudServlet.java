@@ -13,12 +13,9 @@ import jakarta.servlet.http.HttpServletResponse;
 public class CrudServlet extends HttpServlet{
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
             throws ServletException, IOException {
-        // Đặt loại nội dung và mã hóa
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-        // Lấy đường dẫn Servlet
         String path = request.getServletPath();
-        // Xuất thông tin dựa trên đường dẫn
         out.println("<h2>Thông tin CRUD</h2>");
         switch (path) {
             case "/crud/create":

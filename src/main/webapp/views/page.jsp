@@ -1,0 +1,14 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>${message}</h1>
+    <h2>${now.date}</h2> <!-- Lấy ngày từ đối tượng Date -->
+    <!-- Hoặc dùng: <h2><%= ((java.util.Date)request.getAttribute("now")).getDate() %></h2> -->
+</body>
+</html>
